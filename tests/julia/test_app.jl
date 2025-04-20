@@ -8,7 +8,9 @@ json_data = JSON3.read(response.body)
 response = HTTP.get("http://localhost:8000/data")
 @test response.status == 200
 if isfile("/Users/craig/flowtest/data.csv")
-@test isa(JSON3.read(response.body), Vector)
+json_data = JSON3.read(response.body)
+@test haskey(json_data, :columns)
+@test length(json_data.columns) == 5
 else
 @test JSON3.read(response.body) == Dict("error" => "Dataset not found")
 end
