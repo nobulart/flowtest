@@ -1,3 +1,3 @@
-A simple API with /hello and /data endpoints.
-1. Install Julia 1.11+
-    2. Install dependencies:
+A simple web app displaying data.csv in a table using HTML5, CSS, and JavaScript.
+1. Install Node.js 16+
+2. Install dependencies:
