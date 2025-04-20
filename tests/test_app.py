@@ -1,9 +1,8 @@
 ```python
 import pytest
 from flask import Flask
-
-# Assuming your app is in a file named app.py
-from app import app
+from app import app  # Assuming your app is in app.py
+import json
 
 @pytest.fixture
 def client():
@@ -13,5 +12,6 @@ def client():
 def test_hello_endpoint(client):
     response = client.get('/hello')
     assert response.status_code == 200
-    assert response.data == b'Hello, World!'
+    data = response.get_json()  # Get the JSON data from the response
+    assert data['message'] == 'Hello, World!'
 ```

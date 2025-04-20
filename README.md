@@ -1,8 +1,8 @@
-# Flask Hello World API
+# Flask Hello World API (JSON Response)
 
 ## Description
 
-This is a simple Flask REST API demonstrating a basic "Hello, World!" endpoint. It serves as a starting point for building more complex Flask applications.
+This is a simple Flask REST API demonstrating a basic "Hello, World!" endpoint that returns the greeting as a JSON object. It serves as a starting point for building more complex Flask applications.
 
 ## Prerequisites
 
@@ -48,7 +48,13 @@ This is a simple Flask REST API demonstrating a basic "Hello, World!" endpoint. 
 
 *   **Endpoint:** `/hello`
 *   **Method:** GET
-*   **Response:**  The endpoint returns the string "Hello, World!".
+*   **Response:**
+
+    ```json
+    {
+      "message": "Hello, World!"
+    }
+    ```
 
 You can test this endpoint using a web browser or tools like `curl`:
 
