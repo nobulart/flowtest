@@ -1,4 +1,5 @@
 using Genie, Genie.Renderer.Json, DataFrames, CSV, FilePaths
+Genie.config.server_port = 8000
 route("/hello") do
 json(Dict("message" => "Hello, World!"))
 end
@@ -10,4 +11,4 @@ else
 json(Dict("error" => "Dataset not found"))
 end
 end
-start()
+Genie.startup()
