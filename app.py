@@ -11,5 +11,5 @@ app = Flask(__name__)
         df = pd.read_csv('data.csv')
         return jsonify(df.head().to_dict())
         return jsonify({'error': 'Dataset not found'})
-    if __name__ == '__main__':
-    app.run()
+if __name__ == '__main__':
+app.run()
