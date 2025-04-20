@@ -7,7 +7,18 @@ th, td { border: 1px solid black; padding: 8px; }
 </style>
 </head>
 <body>
-<table id="data-table"><tr><th>Loading...</th></tr></table>
+<table id="data-table">
+<tr>
+<th colspan="5">Iris Dataset</th>
+</tr>
+<tr>
+<th>Sepal Length</th>
+<th>Sepal Width</th>
+<th>Petal Length</th>
+<th>Petal Width</th>
+<th>Species</th>
+</tr>
+</table>
 <script>
 fetch('data.csv')
 .then(response => response.text())
@@ -15,7 +26,8 @@ fetch('data.csv')
 const rows = data.split('\n').map(row => row.split(','));
 const table = document.getElementById('data-table');
 table.innerHTML = '';
-rows.forEach(row => {
+rows.forEach((row, index) => {
+if (index === 0 || !row[0] || row.length !== 5) { return; }
 const tr = document.createElement('tr');
 row.forEach(cell => {
 const td = document.createElement('td');
@@ -24,5 +36,11 @@ tr.appendChild(td);
 });
 table.appendChild(tr);
 });
+})
+.catch(error => {
+console.log(error);
+const errorMsg = document.createElement('h1');
+errorMsg.textContent = 'Error: Unable to load data';
+document.getElementById('data-table').appendChild(errorMsg);
 });
 </script>
