@@ -25,7 +25,11 @@ tr.appendChild(td);
 table.appendChild(tr);
 });
 })
-.catch(err => console.error(err));
+.catch(err => {
+console.error(err);
+const table = document.getElementById('data-table');
+table.innerHTML = '<tr><td colspan="5">Error: Unable to load data</td></tr>';
+});
 </script>
 </body>
 </html>
