@@ -4,8 +4,8 @@ route("/hello") do
 json(Dict("message" => "Hello, World!"))
 end
 route("/data") do
-if isfile("data.csv")
-df = CSV.read("data.csv", DataFrame)
+if isfile("/Users/craig/flowtest/data.csv")
+df = CSV.read("/Users/craig/flowtest/data.csv", DataFrame)
 json(first(df, 5))
 else
 json(Dict("error" => "Dataset not found"))
