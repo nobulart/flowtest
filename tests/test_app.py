@@ -1,6 +1,6 @@
-Certainly! Below is the `pytest` script for testing a Flask API defined in `app.py` with a `/hello` endpoint that returns `'Hello, World!'` as JSON. I've included a pytest fixture to create a test client and a test function to check if the endpoint returns the correct status code and JSON.
+Certainly! Below is the correct pytest script for testing a Flask API defined in `app.py` with a `/hello` endpoint that returns `'Hello, World!'` as JSON.
 
-First, ensure your `app.py` looks like this:
+First, ensure your `app.py` looks something like this:
 
 ```python
 from flask import Flask, jsonify
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-Now, create a `test_app.py` file with the following content:
+Now, here is the `test_app.py` file with the pytest tests:
 
 ```python
 import pytest
@@ -33,10 +33,10 @@ def test_hello_endpoint(client):
     assert response.json == {'message': 'Hello, World!'}
 ```
 
-To run the tests, make sure you have `pytest` installed (`pip install pytest`) and then execute the following command in your terminal:
+To run these tests, you can use the following command:
 
 ```sh
 pytest test_app.py
 ```
 
-This will run the test and verify that the `/hello` endpoint returns a status code of 200 and the correct JSON response.
+This script sets up a test client using a pytest fixture and includes one test to check that the `/hello` endpoint returns a status code of 200 and the correct JSON response.

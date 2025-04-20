@@ -1,4 +1,4 @@
-Certainly! Here is the Python script for a Flask REST API with a single `/hello` endpoint that returns `'Hello, World!'` as JSON using `jsonify`:
+Certainly! Here is the Python script for a Flask REST API with a single `/hello` endpoint that returns `'Hello, World!'` as JSON:
 
 ```python
 from flask import Flask, jsonify
@@ -19,4 +19,4 @@ To run this script:
 3. Run the application using `python app.py`.
 4. Access the `/hello` endpoint via your web browser or tools like curl at `http://localhost:5000/hello`.
 
-This will return the JSON response `{"message": "Hello, World!"}` in response to GET requests at the `/hello` endpoint.
+This will return `{"message": "Hello, World!"}` in JSON format in response to GET requests at the `/hello` endpoint.
