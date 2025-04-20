@@ -9,7 +9,7 @@ th, td { border: 1px solid black; padding: 8px; }
 <body>
 <table id="data-table"><tr><th>Loading...</th></tr></table>
 <script>
-fetch('iris.csv')
+fetch('data.csv')
 .then(response => response.text())
 .then(data => {
 const rows = data.split('\n').map(row => row.split(','));
@@ -24,8 +24,7 @@ tr.appendChild(td);
 });
 table.appendChild(tr);
 });
-})
-.catch(error => console.log("Error: Unable to load data"))
+});
 </script>
 </body>
 </html>
