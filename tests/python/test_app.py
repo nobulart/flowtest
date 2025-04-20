@@ -14,7 +14,7 @@ from ..app import app
                 def test_data_endpoint(client):
                 response = client.get('/data')
                 assert response.status_code == 200
-                    if Path('iris.csv').exists():
+                    if Path('data.csv').exists():
                     assert isinstance(response.json, dict)
                         else:
                         assert response.json == {'error': 'Dataset not found'}
