@@ -1,5 +1,4 @@
-Flask API
+Genie API
 A simple API with /hello and /data endpoints.
-Installation
-1. Install Python 3.9+
+1. Install Julia 1.11+
     2. Install dependencies:
