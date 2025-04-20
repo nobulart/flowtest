@@ -11,4 +11,4 @@ else
 json(Dict("error" => "Dataset not found"))
 end
 end
-Genie.startup()
+Genie.up()
