@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple Flask REST API with a single endpoint, `/hello`, that returns the greeting "Hello, World!".  It serves as a basic example to demonstrate how to create and run a Flask application.
+This is a simple Flask REST API demonstrating a basic "Hello, World!" endpoint. It serves as a starting point for building more complex Flask applications.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This is a simple Flask REST API with a single endpoint, `/hello`, that returns t
 
 ## Installation
 
-1.  Clone this repository:
+1.  Clone the repository:
 
     ```bash
     git clone [repository URL]
@@ -22,8 +22,8 @@ This is a simple Flask REST API with a single endpoint, `/hello`, that returns t
 
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate   # On Windows
+    source venv/bin/activate  # Linux/macOS
+    .\venv\Scripts\activate   # Windows
     ```
 
 3.  Install the dependencies:
@@ -42,19 +42,15 @@ This is a simple Flask REST API with a single endpoint, `/hello`, that returns t
     python app.py
     ```
 
-    This will start the development server, typically on `http://localhost:5000/`.
+    This will start the development server, typically accessible at `http://localhost:5000/`.
 
 ## API Endpoint
 
 *   **Endpoint:** `/hello`
 *   **Method:** GET
-*   **Response:**
+*   **Response:**  The endpoint returns the string "Hello, World!".
 
-    ```json
-    "Hello, World!"
-    ```
-
-You can test the endpoint by opening your web browser or using a tool like `curl`:
+You can test this endpoint using a web browser or tools like `curl`:
 
 ```bash
 curl http://localhost:5000/hello
@@ -75,10 +71,6 @@ Unit tests are provided using pytest. To run them:
     ```bash
     pytest
     ```
-
-## Contributing
-
-Contributions are welcome! Please submit pull requests with clear descriptions of your changes.
 
 ## License
 
