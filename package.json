@@ -1,0 +1,13 @@
+{
+                  "name": "flowtest",
+                  "version": "1.0.0",
+                  "scripts": {
+                    "test": "jest --testPathPattern=tests/html"
+                  },
+                  "devDependencies": {
+                    "jest": "^29.7.0"
+                  },
+                  "jest": {
+                    "testMatch": ["**/tests/html/*.test.js"]
+                  }
+                }
